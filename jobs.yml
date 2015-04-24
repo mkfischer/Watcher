@@ -30,10 +30,10 @@
 
 job1:
   # a generic label for a job.  Currently not used make it whatever you want
-  label: Watch /var/www for added or removed files
+  label: ftpRoot
 
   # directory or file to watch.  Probably should be abs path.
-  watch: /var/www
+  watch: /ftpRoot
   # directories or files to exclude
   exclude: ['/var/www/site1/cache', '/var/www/site2/cache']
 
@@ -58,7 +58,7 @@ job1:
   # When monitoring a directory, the events marked with an asterisk (*) above
   # can occur for files in the directory, in which case the name field in the
   # returned event data identifies the name of the file within the directory.
-  events: ['create', 'move_from', 'move_to', 'delete', 'modify']
+  events: ['create', 'move_to']
 
   # TODO:
   # this currently isn't implemented, but this is where support will be added for:
